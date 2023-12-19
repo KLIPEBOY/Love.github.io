@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Отключение прокрутки */
+    background-image: url('background.png'); /* Загрузка фоновой картинки для компьютеров */
+    background-size: cover;
+
+    transition: background-image 1s ease; /* Плавное изменение фоновой картинки */
+}
+
+.centered-text {
+    text-align: center;
+    color: #ffffff; /* Цвет текста */
+    font-size: 44px; /* Размер текста */
+    font-family: 'Arial', sans-serif; /* Шрифт текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.8); /* Тень текста */
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('heart.png'); /* Укажите путь к вашему изображению сердечка */
+    background-size: cover;
+    animation: floatUp 5s infinite linear;
+    pointer-events: none; /* Игнорирование нажатий на сердечки */
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url('background2.png'); /* Загрузка фоновой картинки для мобильных устройств */
+    }
+
+    .centered-text {
+        font-size: 22px; /* Размер текста на мобильных устройствах */
+    }
+
+    .heart {
+        width: 15px;
+        height: 15px;
+    }
+}
