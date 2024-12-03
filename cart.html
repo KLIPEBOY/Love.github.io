@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина Mystery Shack</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        body {
+            background: url(img/background.png);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html">
+                <img src="img/logo.png" alt="Логотип">
+            </a>
+        </div>
+    </header>
+    <div class="cont">
+        <h2>Корзина</h2>
+        <label class="select-all">
+            <input type="checkbox" id="selectAll" />
+            <span>Выбрать всё</span>
+        </label>
+    </div>
+    <div id="products"></div>
+
+    <script>
+        // Запрос на получение информации о товарах
+        fetch('get_products.php')
+            .then(response => response.json())
+            .then(data => {
+                // Отображение информации о товарах на странице
+                data.forEach(product => {
+                    const productElement = document.createElement('div');
+                    productElement.innerHTML = `<img src="${product.photo_url}" alt="${product.name}">
+                                                <h2>${product.name}</h2>
+                                                <p>Цена: $${product.price}</p>
+                                                <p>В наличии: ${product.quantity}</p>`;
+                    document.getElementById('products').appendChild(productElement);
+                });
+            });
+    </script>
+</body>
+</html>

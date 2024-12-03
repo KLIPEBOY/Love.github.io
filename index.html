@@ -1,15 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>I love You</title>
+    <title>Mystery Shack</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+        background: url(img/background.png)
+        }
+       </style>
 </head>
+
 <body>
-    <div class="centered-text">
-        <p>Любоф❤️!</p>
-    </div>
-    <script src="scriptlove.js"></script>
-</body>
-</html>
+        <header>
+            <div class="logo">
+                <a href="./index.html">
+                <img src="img/logo.png" alt="Логотип">
+                </a>
+            </div>
+        </header>
+            <nav>
+                <ul class="left--nav">
+                    <li class="active"><a href="#"><img src="img/katalog.png">каталог</a></li>
+                    <li><a href="#"><img src="img/filter.png">все фильтры</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn"><img src="img/sort.png">сортировка</button>
+                            <div class="dropdown-content">
+                                <a href="#">По популярности</a>
+                                <a href="#">По рейтингу</a>
+                                <a href="#">По возрастанию цены</a>
+                                <a href="#">По убыванию цены</a>
+                                <a href="#">Новинки</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="right--nav">
+                    <li><a href="#"><img src="img/favourites.png"></a></li>
+                    <li><a href="#"><img src="img/delivery.png"></a></li>
+                    <li><a href="./cart.html"><img src="img/cart.png"></a></li>
+                    <li><a href="#"><img src="img/profile.png"></a></li>
+                </ul>
+                <form>
+                    <input type="text" placeholder="Поиск">
+                    <button type="submit"></button>
+                </form>
+            </nav>
+        
+        <!-- Главная часть 1 страницы где будут располагаться товары -->
+        <div class="hero container">
+            <div class="hero--info">
+                <h2>Новинки</h2>
+                <p>актуально в этом месяце</p>
+                <div class="product-list">
+                    <div class="product">
+                        <div class="favorite-btn">
+                          <img src="img/favourites.png" alt="Добавить в избранное" class="favorite-icon">
+                        </div>
+                        <img src="img/product1.png" alt="Товар 1">
+                        <h3>Кепка Диппера</h3>
+                        <h4>1500р</h4>
+                        <p>Краткое описание товара 1</p>
+                        <a href="product1.html" class="view-button">Перейти к товару</a>
+                      </div>
+                    <div class="product">
+                        <div class="favorite-btn">
+                            <img src="img/favourites.png" alt="Добавить в избранное" class="favorite-icon">
+                          </div>
+                        <img src="img/product2.png" alt="Товар 2">
+                        <h3>Гномик</h3>
+                        <h4>20 000р</h4>
+                        <p>Краткое описание товара 2</p>
+                        <a href="product2.html" class="view-button">Перейти к товару</a>
+                    </div>
+                    <div class="product">
+                        <div class="favorite-btn">
+                            <img src="img/favourites.png" alt="Добавить в избранное" class="favorite-icon">
+                          </div>
+                        <img src="img/product3.png" alt="Товар 3">
+                        <h3>Футболка Зуса</h3>
+                        <h4>2000р</h4>
+                        <p>Краткое описание товара 3</p>
+                        <a href="product3.html" class="view-button">Перейти к товару</a>
+                    </div>
+                    <div class="product">
+                        <div class="favorite-btn">
+                            <img src="img/favourites.png" alt="Добавить в избранное" class="favorite-icon">
+                          </div>
+                        <img src="img/product4.png" alt="Товар 4">
+                        <h3>Гриб-снюсоед</h3>
+                        <h4>1000р</h4>
+                        <p>Краткое описание товара 4</p>
+                        <a href="product3.html" class="view-button">Перейти к товару</a>
+                    </div>
+                    <div class="product">
+                        <div class="favorite-btn">
+                            <img src="img/favourites.png" alt="Добавить в избранное" class="favorite-icon">
+                          </div>
+                        <img src="img/product4.png" alt="Товар 4">
+                        <h3>Гриб-снюсоед</h3>
+                        <h4>1000р</h4>
+                        <p>Краткое описание товара 4</p>
+                        <a href="product3.html" class="view-button">Перейти к товару</a>
+                    </div>
+                    <div class="product">
+                        <div class="favorite-btn">
+                            <img src="img/favourites.png" alt="Добавить в избранное" class="favorite-icon">
+                          </div>
+                        <img src="img/product4.png" alt="Товар 4">
+                        <h3>Гриб-снюсоед</h3>
+                        <h4>1000р</h4>
+                        <p>Краткое описание товара 4</p>
+                        <a href="product3.html" class="view-button">Перейти к товару</a>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </body>
+    </html>
